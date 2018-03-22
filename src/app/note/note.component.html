@@ -1,0 +1,31 @@
+<div class="card">
+  <form class="card-body" [formGroup]="form">
+    <div class="form-group">
+      <input formControlName="title" placeholder="Title" class="form-control">
+    </div>
+    <div class="form-group">
+        <textarea formControlName="body" class="form-control"
+                  placeholder="Note content">
+        </textarea>
+    </div>
+    <div class="form-row">
+      <div class="col-md-8">
+        <input class="form-control" formControlName="keywords" placeholder="Put some keywords...">
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <input class="form-control" placeholder="yyyy-mm-dd"
+                 formControlName="date" (click)="d.toggle()"
+                 name="dp" ngbDatepicker #d="ngbDatepicker">
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="card-footer">
+    <div class="btn-group">
+      <button class="btn btn-primary" [disabled]="form.invalid" (click)="add()">Save</button>&nbsp;
+      <button class="btn btn-secondary" [disabled]="!note?.id" (click)="remove()">Delete</button>
+    </div>
+  </div>
+</div>
+
