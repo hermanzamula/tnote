@@ -11,7 +11,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
   styleUrls: ['./note-search.component.css']
 })
 export class NoteSearchComponent implements OnInit {
-  private search: FormGroup;
+  search: FormGroup;
   @Output()
   onSearch: EventEmitter<string> = new EventEmitter();
 
