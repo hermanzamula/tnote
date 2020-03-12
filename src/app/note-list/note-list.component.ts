@@ -6,8 +6,7 @@ import {Note} from '../shared/model/note.model';
 
 @Component({
   selector: 'app-note-list',
-  templateUrl: './note-list.component.html',
-  styleUrls: ['./note-list.component.css']
+  templateUrl: './note-list.component.html'
 })
 export class NoteListComponent {
   notesFn;
