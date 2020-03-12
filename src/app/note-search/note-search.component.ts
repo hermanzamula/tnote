@@ -1,8 +1,7 @@
+import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {NotesService} from '../shared/service/notes.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
 
 
 @Component({
@@ -23,7 +22,7 @@ export class NoteSearchComponent implements OnInit {
 
   ngOnInit() {
     this.search.get('search')
-      .valueChanges.debounceTime(300).distinctUntilChanged()
+      .valueChanges.pipe(debounceTime(300), distinctUntilChanged())
       .subscribe(str => {
         this.onSearch.emit(str);
         this.service.triggerSearch(str);

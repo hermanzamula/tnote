@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Note} from '../model/note.model';
-import {Subject} from 'rxjs/Subject';
+import {Subject} from 'rxjs';
 
 @Injectable()
 export class NotesService {
