@@ -1,9 +1,11 @@
 <div class="card">
-  <div class="list-group">
-    <a class="list-group-item list-group-item-action {{selected === note? 'active' : ''}}"
-       *ngFor="let note of notesFn()"
-       (click)="selectNote(note)">{{note.title}}</a>
-  </div>
+   <div class="list-group">
+      <a
+         class="list-group-item list-group-item-action {{ selected === note ? 'active' : '' }}"
+         *ngFor="let note of notesFn()"
+         (click)="selectNote(note)"
+      >
+         {{ note.title }}
+      </a>
+   </div>
 </div>
-
-
