@@ -7,9 +7,9 @@
       "start": "node heroku-server.js",
       "serve": "ng serve",
       "build": "ng build --prod",
-      "test": "ng test",
+      "cy:run": "cypress run --browser chrome --headless",
+      "cy:open": "cypress open",
       "lint": "ng lint",
-      "e2e": "ng e2e",
       "postinstall": "npm run build"
    },
    "private": true,
