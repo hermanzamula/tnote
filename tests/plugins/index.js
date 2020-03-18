@@ -9,7 +9,7 @@
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
 
-const cypressTypeScriptPreprocessor = require('@bahmutov/add-typescript-to-cypress/src/cy-ts-preprocessor');
+const cypressTypeScriptPreprocessor = require('./cy-ts-preprocessor');
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
